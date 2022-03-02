@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="weather.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="icon" 
+    type="image/png" 
+    href="data:image/png;base64,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">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+<div class="container">
+    <div class="row top">
+      <div class="col-1">
+        <span class="time">2:11pm</span>
+      </div>
+      <div class="col-10">
+        <h1 id= "todaysDate">Thursday January 27, 2021</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="today col-1"></div>
+      <div class="col-8">
+        <form id="input-city">
+          <input class="search" id="enterCity" type="text" name="fname" placeholder="Enter city"/>
+          <input class="enter" type="submit" value="Search"/>
+          <button id="currentLocation">Get Current Location</button>
+        </form>
+        </div>
+      </div>
+    
+    <div class="row">
+      <div class="today col-1"></div>
+      <div class="today col-3">
+          <span class="currently">currently</span>
+          <br />
+          <span class="degreesNow"> 22ºC</span>
+          <br />
+          <span id="currentCity">Sydney</span>
+          <br />
+          <span id="temperature-desc"> Warm </span>
+      </div>
+      <div class="col-3">
+        <img src="images/sun.png" width="270px">
+      </div>
+    </div>
+    <div class="row week">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <img src="images/sun.png" width="100px">
+        <div class="days">Tomorrow</div>
+        <span class="degrees">20º</span>
+      </div>
+      <div class="col-2">
+        <img src="images/rain.png" width="100px">
+        <div class="days">Saturday</div>
+        <span class="degrees">14º</span>
+      </div>
+      <div class="col-2">
+        <img src="images/rain.png" width="100px">
+        <div class="days">Sunday</div>
+        <span class="degrees">11º</span>
+      </div>
+      <div class="col-2">
+        <img src="images/rain.png" width="100px">
+        <div class="days">Monday</div>
+        <span class="degrees">10º</span>
+      </div>
+      <div class="col-2">
+        <img src="images/snow.png" width="100px">
+        <div class="days">Tuesday</div>
+        <span class="degrees">3º</span>
+      </div>
+  </div>
+    </body>
+    <script src="weather.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+h1 {
+  color: #424242;
+}
+
+.top {
+  padding: 40px 0px 30px;
+}
+
+.time {
+  color: #bfbfbf;
+  position: relative;
+  left: -10px;
+  top: 5px;
+}
+
+.search {
+  text-align: center;
+}
+
+.enter {
+  color: #bfbfbf;
+  border: none;
+  background: none;
+}
+
+.today {
+  color: #7c7c7c;
+  text-align: center;
+  padding: 25px;
+  font-size: 30px;
+}
+
+#currentLocation {
+  font-size: 17px;
+  background-color: rgb(225, 237, 248);
+  border: none;
+  color: gray;
+}
+
+#currentCity {
+  text-transform: capitalize;
+}
+
+#temperature-desc {
+  font-size: 15px;
+}
+
+.currently {
+  font-size: 20px;
+  position: relative;
+  left: -4px;
+  bottom: -10px;
+}
+.degreesNow {
+  font-size: 100px;
+  color: #424242;
+  position: relative;
+  right: -10px;
+}
+
+.city {
+  font-family: "Roboto", sans-serif;
+}
+
+.week {
+  padding: 20px 10px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+.days {
+  font-size: 20px;
+  color: #424242;
+  font-family: "Roboto", sans-serif;
+}
