@@ -10,7 +10,6 @@ h1 {
   color: #bfbfbf;
   position: relative;
   left: -10px;
-  top: 5px;
 }
 
 .search {
@@ -26,8 +25,12 @@ h1 {
 .today {
   color: #7c7c7c;
   text-align: center;
-  padding: 25px;
-  font-size: 30px;
+  padding: 20px 0px 20px 0px;
+  font-size: 25px;
+}
+
+#todaysDate {
+  font-size: 20px;
 }
 
 #currentLocation {
@@ -37,8 +40,16 @@ h1 {
   color: gray;
 }
 
+.celsius {
+  position: relative;
+  top: -30px;
+  left: 15px;
+  color: #424242;
+}
+
 #currentCity {
   text-transform: capitalize;
+  font-size: 30px;
 }
 
 #temperature-desc {
@@ -52,7 +63,7 @@ h1 {
   bottom: -10px;
 }
 .degreesNow {
-  font-size: 100px;
+  font-size: 70px;
   color: #424242;
   position: relative;
   right: -10px;
@@ -69,7 +80,7 @@ h1 {
 }
 
 .days {
-  font-size: 20px;
+  font-size: 14px;
   color: #424242;
   font-family: "Roboto", sans-serif;
 }

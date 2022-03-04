@@ -48,7 +48,7 @@ function searchCity(event) {
     console.log(response.data);
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector(".degreesNow");
-    temperatureElement.innerHTML = `${temperature}ºC`;
+    temperatureElement.innerHTML = `${temperature}`;
     let description = document.querySelector("#temperature-desc");
     description.innerHTML = response.data.weather[0].description;
   }
@@ -71,7 +71,7 @@ function getCurrentLocation(position) {
       console.log(response.data);
       let temperature = Math.round(response.data.main.temp);
       let temperatureElement = document.querySelector(".degreesNow");
-      temperatureElement.innerHTML = `${temperature}ºC`;
+      temperatureElement.innerHTML = `${temperature}`;
       let description = document.querySelector("#temperature-desc");
       description.innerHTML = response.data.weather[0].description;
     }
