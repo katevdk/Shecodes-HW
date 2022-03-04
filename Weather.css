@@ -87,4 +87,7 @@ h1 {
 
 footer {
   font-size: 10px;
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
 }
