@@ -74,6 +74,10 @@ function getCurrentLocation(position) {
       temperatureElement.innerHTML = `${temperature}`;
       let description = document.querySelector("#temperature-desc");
       description.innerHTML = response.data.weather[0].description;
+      // let descriptionBase = response.data.weather[0].main;
+      // if (descriptionBase == "Clouds") {
+      //   alert("working");
+      // }
     }
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   }
