@@ -72,6 +72,12 @@ h1 {
   color: #424242;
 }
 
+.fahrenheit {
+  position: relative;
+  top: -30px;
+  left: 22px;
+}
+
 #currentCity {
   text-transform: capitalize;
   font-size: 30px;
@@ -83,9 +89,6 @@ h1 {
 
 .currently {
   font-size: 20px;
-  position: relative;
-  left: -4px;
-  bottom: -10px;
 }
 .degreesNow {
   font-size: 70px;
@@ -93,21 +96,23 @@ h1 {
   position: relative;
   right: -10px;
 }
+.city {
+  font-family: "Roboto", sans-serif;
+}
 
 .todaysWeatherImage {
   width: 180px;
   height: 180px;
   position: relative;
-  right: -100px;
-  top: 30px;
-}
-
-.city {
-  font-family: "Roboto", sans-serif;
+  right: -120px;
+  top: 55px;
 }
 
 .week {
   display: flex;
+  position: relative;
+  left: 70px;
+  top: 50px;
   gap: 30px;
   padding: 20px 10px;
   text-align: center;
