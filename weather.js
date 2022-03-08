@@ -33,6 +33,7 @@ date.innerHTML =
   now.getDate() +
   ", " +
   now.getFullYear();
+let apiKey = "fba31a6c985b0331975102e979ddcb33";
 
 // searched location
 function searchCity(event) {
@@ -41,10 +42,10 @@ function searchCity(event) {
   let currentCity = document.querySelector("#currentCity");
   currentCity.innerHTML = city.value;
   let cityInput = city.value;
-  let apiKey = "fba31a6c985b0331975102e979ddcb33";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric`;
 
   function showTemperature(response) {
+    event.preventDefault();
     console.log(response.data);
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector(".degreesNow");
@@ -96,6 +97,7 @@ function getCurrentLocation(position) {
   }
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
+
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", getCurrentLocation);
 
@@ -109,3 +111,5 @@ let celsiusTemp = null;
 
 let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+getCurrentLocation();
