@@ -16,19 +16,18 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-<div class="container">
-    <div class="row top">
-      <div class="col-1">
-        <span class="time"> </span>
-      </div>
-      <div class="col-10">
-        <h1 id= "todaysDate"> </h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="today col-1"></div>
-      <div class="col-8">
+    <container class="timeAndDate">
+    <span class="time"> </span>
+  </div>
+  
+  <h1 id= "todaysDate"> </h1>
+</div>
+</div>
+</container >
+  
+
+      <div class="today"></div>
+   
         <form id="input-city">
           <input class="search" id="enterCity" type="text" name="fname" placeholder="Enter city"/>
           <input class="enter" type="submit" value="Search"/>
@@ -37,10 +36,10 @@
       </div>
     </div>
     
-    <div class="row week"></div>
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="today col-3">
+    <div class="week"></div>
+
+     
+      <div class="today">
           <span class="currently">currently</span>
           <br />
           <span class="degreesNow">0</span><span class="celsius">ºC</span>
@@ -49,39 +48,34 @@
           <br />
           <span id="temperature-desc">Feels Like</span>
       </div>
-      <div class="col-3">
+    
         <img src="images/sun.png" width="270px">
       </div>
     </div>
-    <div class="row week"></div>
-    <div class="row week">
-      <div class="col-1"></div>
-      <div class="col-2">
+    <div class="week"></div>
+
         <img src="images/sun.png" width="70px">
         <div class="days">Tomorrow</div>
         <span class="degrees">20º</span>
-      </div>
-      <div class="col-2">
+      
         <img src="images/rain.png" width="70px">
         <div class="days">Saturday</div>
         <span class="degrees">14º</span>
-      </div>
-      <div class="col-2">
+      
+      
         <img src="images/rain.png" width="70px">
         <div class="days">Sunday</div>
         <span class="degrees">11º</span>
-      </div>
-      <div class="col-2">
+    
+     
         <img src="images/rain.png" width="70px">
         <div class="days">Monday</div>
         <span class="degrees">10º</span>
-      </div>
-      <div class="col-2">
+  
         <img src="images/snow.png" width="70px">
         <div class="days">Tuesday</div>
         <span class="degrees">3º</span>
-      </div>
-  </div>
+
   <br />
   <footer>
 
