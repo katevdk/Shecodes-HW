@@ -57,6 +57,8 @@ function searchCity(event) {
     let humidity = Math.round(response.data.main.humidity);
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = `Humidity: ${humidity}%`;
+
+    celsiusTemp = response.data.main.temp;
   }
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
@@ -94,16 +96,16 @@ function getCurrentLocation(position) {
   }
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
-
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", getCurrentLocation);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let degreesElement = document.querySelector(".degreesNow");
   degreesElement.innerHTML = Math.round(fahrenheitTemp);
 }
+let celsiusTemp = null;
 
 let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
