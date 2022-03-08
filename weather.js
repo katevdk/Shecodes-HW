@@ -86,6 +86,9 @@ function getCurrentLocation(position) {
       let humidity = Math.round(response.data.main.humidity);
       let humidityElement = document.querySelector("#humidity");
       humidityElement.innerHTML = `Humidity: ${humidity}%`;
+      let name = response.data.name;
+      let nameElement = document.querySelector("#currentCity");
+      nameElement.innerHTML = `${name}`;
       // let descriptionBase = response.data.weather[0].main;
       // if (descriptionBase == "Clouds") {
       //   alert("working");

@@ -86,6 +86,7 @@ h1 {
 
 #temperature-desc {
   font-size: 15px;
+  text-transform: capitalize;
 }
 #wind-speed {
   font-size: 15px;
