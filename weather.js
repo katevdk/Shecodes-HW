@@ -1,5 +1,5 @@
 let now = new Date();
-let time = document.querySelector(".time");
+let time = document.querySelector("#time");
 time.innerHTML = now.getHours() + ":" + now.getMinutes();
 let day = [
   "Sunday",

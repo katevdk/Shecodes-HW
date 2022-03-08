@@ -2,8 +2,8 @@ h1 {
   color: #424242;
 }
 
-.top {
-  padding: 40px 0px 30px;
+* {
+  font-family: roboto, arial, helvetica, sans-serif;
 }
 
 .timeAndDate {
@@ -11,18 +11,24 @@ h1 {
   gap: 20px;
 }
 
-.time {
+.timeAndDate > #time {
   color: #bfbfbf;
   position: relative;
   right: -70px;
-  top: 40px;
+  top: 55px;
 }
 
-#todaysDate {
+.timeAndDate > #todaysDate {
   font-size: 20px;
   position: relative;
   top: 40px;
-  right: -100px;
+  right: -80px;
+}
+
+#input-city {
+  position: relative;
+  top: 20px;
+  right: -70px;
 }
 
 .search {
@@ -43,10 +49,20 @@ h1 {
 }
 
 #currentLocation {
-  font-size: 17px;
+  font-size: 15px;
   background-color: rgb(225, 237, 248);
   border: none;
   color: gray;
+}
+
+.main {
+  display: flex;
+}
+
+.main > .today {
+  position: relative;
+  right: -80px;
+  top: 40px;
 }
 
 .celsius {
@@ -78,11 +94,21 @@ h1 {
   right: -10px;
 }
 
+.todaysWeatherImage {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  right: -100px;
+  top: 30px;
+}
+
 .city {
   font-family: "Roboto", sans-serif;
 }
 
 .week {
+  display: flex;
+  gap: 30px;
   padding: 20px 10px;
   text-align: center;
   color: #7c7c7c;
