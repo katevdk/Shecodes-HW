@@ -51,6 +51,12 @@ function searchCity(event) {
     temperatureElement.innerHTML = `${temperature}`;
     let description = document.querySelector("#temperature-desc");
     description.innerHTML = response.data.weather[0].description;
+    let windSpeed = Math.round(response.data.wind.speed);
+    let windSpeedElement = document.querySelector("#wind-speed");
+    windSpeedElement.innerHTML = `Wind: ${windSpeed} km/h`;
+    let humidity = Math.round(response.data.main.humidity);
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `Humidity: ${humidity}%`;
   }
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
@@ -74,6 +80,12 @@ function getCurrentLocation(position) {
       temperatureElement.innerHTML = `${temperature}`;
       let description = document.querySelector("#temperature-desc");
       description.innerHTML = response.data.weather[0].description;
+      let windSpeed = Math.round(response.data.wind.speed);
+      let windSpeedElement = document.querySelector("#wind-speed");
+      windSpeedElement.innerHTML = `Wind: ${windSpeed} km/h`;
+      let humidity = Math.round(response.data.main.humidity);
+      let humidityElement = document.querySelector("#humidity");
+      humidityElement.innerHTML = `Humidity: ${humidity}%`;
       // let descriptionBase = response.data.weather[0].main;
       // if (descriptionBase == "Clouds") {
       //   alert("working");

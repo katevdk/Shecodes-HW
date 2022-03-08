@@ -87,6 +87,13 @@ h1 {
 #temperature-desc {
   font-size: 15px;
 }
+#wind-speed {
+  font-size: 15px;
+}
+
+#humidity {
+  font-size: 15px;
+}
 
 .currently {
   font-size: 20px;
