@@ -89,10 +89,6 @@ function getCurrentLocation(position) {
       let name = response.data.name;
       let nameElement = document.querySelector("#currentCity");
       nameElement.innerHTML = `${name}`;
-      // let descriptionBase = response.data.weather[0].main;
-      // if (descriptionBase == "Clouds") {
-      //   alert("working");
-      // }
     }
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   }
@@ -101,3 +97,13 @@ function getCurrentLocation(position) {
 
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", getCurrentLocation);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let degreesElement = document.querySelector(".degreesNow");
+  degreesElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitLink = document.querySelector(".fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
