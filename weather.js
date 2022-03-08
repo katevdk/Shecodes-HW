@@ -51,7 +51,7 @@ function searchCity(event) {
     temperatureElement.innerHTML = `${temperature}`;
     let description = document.querySelector("#temperature-desc");
     description.innerHTML = response.data.weather[0].description;
-    let windSpeed = Math.round(response.data.wind.speed);
+    let windSpeed = Math.round(response.data.wind.speed * 3.6);
     let windSpeedElement = document.querySelector("#wind-speed");
     windSpeedElement.innerHTML = `Wind: ${windSpeed} km/h`;
     let humidity = Math.round(response.data.main.humidity);
@@ -80,7 +80,7 @@ function getCurrentLocation(position) {
       temperatureElement.innerHTML = `${temperature}`;
       let description = document.querySelector("#temperature-desc");
       description.innerHTML = response.data.weather[0].description;
-      let windSpeed = Math.round(response.data.wind.speed);
+      let windSpeed = Math.round(response.data.wind.speed * 3.6);
       let windSpeedElement = document.querySelector("#wind-speed");
       windSpeedElement.innerHTML = `Wind: ${windSpeed} km/h`;
       let humidity = Math.round(response.data.main.humidity);
