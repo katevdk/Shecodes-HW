@@ -92,6 +92,8 @@ function getCurrentLocation(position) {
       let name = response.data.name;
       let nameElement = document.querySelector("#currentCity");
       nameElement.innerHTML = `${name}`;
+
+      celsiusTemp = Math.round(response.data.main.temp);
     }
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   }
@@ -107,9 +109,18 @@ function showFahrenheitTemp(event) {
   let degreesElement = document.querySelector(".degreesNow");
   degreesElement.innerHTML = Math.round(fahrenheitTemp);
 }
-let celsiusTemp = null;
 
+let celsiusTemp = null;
 let fahrenheitLink = document.querySelector(".fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let degreesElement = document.querySelector(".degreesNow");
+  degreesElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusLink = document.querySelector(".celsius");
+celsiusLink.addEventListener("click", showCelsiusTemp);
 
 getCurrentLocation();

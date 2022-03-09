@@ -71,13 +71,24 @@ h1 {
   top: -30px;
   left: 15px;
   color: #424242;
+  text-decoration: none;
+}
+
+.celsius:hover {
+  text-decoration: underline;
+}
+
+.division {
+  position: relative;
+  right: -18px;
+  top: -30px;
 }
 
 .fahrenheit {
   position: relative;
   text-decoration: none;
   top: -30px;
-  left: 22px;
+  left: 20px;
 }
 
 .fahrenheit:hover {
