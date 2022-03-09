@@ -105,22 +105,26 @@ button.addEventListener("click", getCurrentLocation);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let degreesElement = document.querySelector(".degreesNow");
   degreesElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 let celsiusTemp = null;
-let fahrenheitLink = document.querySelector(".fahrenheit");
+let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 function showCelsiusTemp(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let degreesElement = document.querySelector(".degreesNow");
   degreesElement.innerHTML = Math.round(celsiusTemp);
 }
 
-let celsiusLink = document.querySelector(".celsius");
+let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 getCurrentLocation();

@@ -66,16 +66,11 @@ h1 {
   top: 40px;
 }
 
-.celsius {
+#celsius {
   position: relative;
   top: -30px;
   left: 15px;
-  color: #424242;
   text-decoration: none;
-}
-
-.celsius:hover {
-  text-decoration: underline;
 }
 
 .division {
@@ -84,15 +79,16 @@ h1 {
   top: -30px;
 }
 
-.fahrenheit {
+#fahrenheit {
   position: relative;
   text-decoration: none;
   top: -30px;
   left: 20px;
 }
 
-.fahrenheit:hover {
-  text-decoration: underline;
+.active {
+  color: #424242;
+  cursor: default;
 }
 
 #currentCity {
