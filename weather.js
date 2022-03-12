@@ -134,5 +134,3 @@ function showCelsiusTemp(event) {
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
-
-getCurrentLocation();
