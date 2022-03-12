@@ -122,8 +122,8 @@ h1 {
 }
 
 #todaysWeatherImage {
-  width: 280px;
-  height: 280px;
+  width: 100px;
+  height: 100px;
   position: relative;
   right: -180px;
   top: 55px;
