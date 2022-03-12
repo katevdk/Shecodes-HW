@@ -46,7 +46,7 @@ function searchCity(event) {
 
   function showTemperature(response) {
     event.preventDefault();
-    console.log(response.data);
+
     let temperature = Math.round(response.data.main.temp);
     let temperatureElement = document.querySelector(".degreesNow");
     temperatureElement.innerHTML = `${temperature}`;
@@ -58,7 +58,11 @@ function searchCity(event) {
     let humidity = Math.round(response.data.main.humidity);
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = `Humidity: ${humidity}%`;
-
+    let weatherIcon = document.querySelector("#todaysWeatherImage");
+    weatherIcon.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
     celsiusTemp = response.data.main.temp;
   }
 
@@ -92,7 +96,11 @@ function getCurrentLocation(position) {
       let name = response.data.name;
       let nameElement = document.querySelector("#currentCity");
       nameElement.innerHTML = `${name}`;
-
+      let weatherIcon = document.querySelector("#todaysWeatherImage");
+      weatherIcon.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
       celsiusTemp = Math.round(response.data.main.temp);
     }
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
