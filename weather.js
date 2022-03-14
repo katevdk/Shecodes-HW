@@ -35,24 +35,6 @@ date.innerHTML =
   now.getFullYear();
 
 //
-function displayForecast(response) {
-  console.log(response.data.daily);
-  let forecastElement = document.querySelector(".week");
-  let forecastHTML = "";
-  let days = ["Thru", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="day1">
-  <img src="images/sun.png" width="70px">
-  <div class="days">${day}</div>
-  <span class="degreesMax">20º</span>
-  <span> / </span>
-  <span class="degreesMin">16º</span>
-  </div>`;
-  });
-  forecastElement.innerHTML = forecastHTML;
-}
 //
 
 function getForecast(coordinates) {
@@ -143,6 +125,25 @@ function getCurrentLocation(position) {
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", getCurrentLocation);
 
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector(".week");
+  let forecastHTML = "";
+  let days = ["Thru", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="day1">
+      <img src="images/sun.png" width="70px">
+      <div class="days">${day}</div>
+      <span class="degreesMax">20º</span>
+      <span> / </span>
+      <span class="degreesMin">16º</span>
+      </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showFahrenheitTemp(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");
@@ -166,5 +167,3 @@ function showCelsiusTemp(event) {
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
-
-displayForecast();
