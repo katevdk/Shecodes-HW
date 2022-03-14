@@ -144,7 +144,10 @@ h1 {
 .days {
   font-size: 14px;
   color: #424242;
-  font-family: "Roboto", sans-serif;
+}
+
+.degreesMax {
+  color: #424242;
 }
 
 footer {
