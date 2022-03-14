@@ -54,6 +54,10 @@ function displayForecast() {
 }
 //
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
+
 // searched location
 function searchCity(event) {
   event.preventDefault();
@@ -84,6 +88,8 @@ function searchCity(event) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     celsiusTemp = response.data.main.temp;
+
+    getForecast(response.data.coord);
   }
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
@@ -122,6 +128,7 @@ function getCurrentLocation(position) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       );
       celsiusTemp = Math.round(response.data.main.temp);
+      getForecast(response.data.coord);
     }
     axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   }
