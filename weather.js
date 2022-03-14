@@ -34,6 +34,26 @@ date.innerHTML =
   ", " +
   now.getFullYear();
 
+//
+function displayForecast() {
+  let forecastElement = document.querySelector(".week");
+  let forecastHTML = "";
+  let days = ["Thru", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="day1">
+  <img src="images/sun.png" width="70px">
+  <div class="days">${day}</div>
+  <span class="degreesMax">20º</span>
+  <span> / </span>
+  <span class="degreesMin">16º</span>
+  </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+//
+
 // searched location
 function searchCity(event) {
   event.preventDefault();
@@ -134,3 +154,5 @@ function showCelsiusTemp(event) {
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
+
+displayForecast();
