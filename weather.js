@@ -131,14 +131,16 @@ function displayForecast(response) {
   console.log(forecast);
   let forecastHTML = "";
   forecast.forEach(function (forecastDay) {
+    let dayMax = Math.round(forecastDay.temp.max - 273.15);
+    let dayMin = Math.round(forecastDay.temp.min - 273.15);
     forecastHTML =
       forecastHTML +
       `<div class="day1">
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="70px">
       <div class="days">${forecastDay.dt}</div>
-      <span class="degreesMax">${forecastDay.temp.max}</span>
+      <span class="degreesMax">${dayMax}º</span>
       <span> / </span>
-      <span class="degreesMin">${forecastDay.temp.min}</span>
+      <span class="degreesMin">${dayMin}º</span>
       </div>`;
   });
   forecastElement.innerHTML = forecastHTML;
