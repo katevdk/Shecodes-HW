@@ -172,4 +172,12 @@ footer {
     position: relative;
     left: 100px;
   }
+
+  .moreInfo {
+    position: relative;
+    text-align: center;
+    right: -100px;
+    top: 180px;
+    color: #7c7c7c;
+  }
 }
